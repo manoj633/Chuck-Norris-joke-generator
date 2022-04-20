@@ -1,14 +1,16 @@
 package com.springframework.spring5jokesapp.controllers;
 
 import com.springframework.spring5jokesapp.services.JokeService;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-public class JokController {
+@Controller
+public class JokeController {
 
     private final JokeService jokeService;
 
-    public JokController(JokeService jokeService) {
+    public JokeController(JokeService jokeService) {
         this.jokeService = jokeService;
     }
 
